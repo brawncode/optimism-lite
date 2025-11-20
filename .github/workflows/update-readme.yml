@@ -1,0 +1,80 @@
+name: System Monitor Log (every 20 min)
+
+on:
+  schedule:
+    - cron: "*/20 * * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: sys-monitor
+  cancel-in-progress: true
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Random delay
+        run: |
+          DELAY=$((RANDOM % 360))
+          echo "Sleeping for $DELAY seconds..."
+          sleep $DELAY
+
+      - name: Maybe write log entry
+        run: |
+          mkdir -p logs
+
+          DO_UPDATE=$((RANDOM % 10))
+          if [ $DO_UPDATE -ge 8 ]; then
+            echo "Skipping this run."
+            exit 0
+          fi
+
+          DAY=$(date -u +"%Y-%m-%d")
+          FILE="logs/${DAY}.log"
+
+          TIME=$(date -u +"%Y-%m-%d %H:%M:%S UTC")
+          TASK=$((100 + RANDOM % 900))
+          LATENCY=$((20 + RANDOM % 180))      # 20–200 ms
+          UPTIME=$(awk -v r=$RANDOM 'BEGIN { printf("%.3f", 99.0 + (r % 900)/10000) }')
+
+          # Формируем "живую" строку лога
+          echo "[${TIME}] Task #${TASK} COMPLETED — uptime=${UPTIME}% — latency=${LATENCY}ms" >> "$FILE"
+
+          echo "Log written: $FILE"
+
+      - name: Update README with today's last 5 logs
+        run: |
+          DAY=$(date -u +"%Y-%m-%d")
+          FILE="logs/${DAY}.log"
+
+          echo "### 🛠️ System Monitor — ${DAY}" > section.txt
+          echo "" >> section.txt
+
+          if [ -f "$FILE" ]; then
+            tail -n 5 "$FILE" | tac | while read -r line; do
+              echo "- \`${line}\`" >> section.txt
+            done
+          else
+            echo "_No events yet today._" >> section.txt
+          fi
+
+          echo "" >> section.txt
+
+          if grep -q "### 🛠️ System Monitor" README.md; then
+            sed -i '/### 🛠️ System Monitor/,$d' README.md
+          fi
+
+          cat section.txt >> README.md
+          rm -f section.txt
+
+      - name: Commit and push
+        run: |
+          git config user.name "brawncode"
+          git config user.email "nftdropped@gmail.com"
+          git add README.md logs/
+          git commit -m "System log update: $(date -u)" || echo "No changes"
+          git push
