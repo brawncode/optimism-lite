@@ -1,8 +1,8 @@
 # Optimism Lite
 
-> mini-hub for the **Superchain Eco** — education-first, Base-aligned guides, badge walkthroughs, and low-friction actions (daily check-in, onchain routines)
+> mini-hub for the **Superchain Eco** — education-first, Optimism-aligned guides, badge walkthroughs, and low-friction actions (daily check-in, onchain routines)
 
-[![Deploy](https://therealsujitk-vercel-badge.vercel.app/?app=base-lite)](https://base-lite-pi.vercel.app/)
+[![Deploy](https://therealsujitk-vercel-badge.vercel.app/?app=base-lite)](https://oplite.vercel.app/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-black.svg)](#license)
 
 ## What is it?
@@ -22,9 +22,7 @@ It mirrors Celo Lite’s minimal UI/structure, adapted to **Base**:
 
 ## Live
 
-- App: **https://base-lite-pi.vercel.app/**
-- Repo: **https://github.com/wenalt/base-lite/**
-- Farcaster: **https://farcaster.xyz/wenaltszn.eth**  
+- App: **https://optilite.vercel.app/**
 - Discord (Base): **https://discord.gg/buildonbase**  
 - X (Base): **https://x.com/base**
 
