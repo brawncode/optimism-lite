@@ -2,7 +2,7 @@ name: System Monitor Log (every 20 min)
 
 on:
   schedule:
-    - cron: "*/20 * * * *"
+    - cron: "*/20 * * * *"  # каждые 20 минут
   workflow_dispatch:
 
 concurrency:
@@ -19,6 +19,7 @@ jobs:
 
       - name: Random delay
         run: |
+          # задержка 0–360 секунд (до 6 минут)
           DELAY=$((RANDOM % 360))
           echo "Sleeping for $DELAY seconds..."
           sleep $DELAY
@@ -27,6 +28,7 @@ jobs:
         run: |
           mkdir -p logs
 
+          # 80% шанс записать лог
           DO_UPDATE=$((RANDOM % 10))
           if [ $DO_UPDATE -ge 8 ]; then
             echo "Skipping this run."
@@ -37,8 +39,8 @@ jobs:
           FILE="logs/${DAY}.log"
 
           TIME=$(date -u +"%Y-%m-%d %H:%M:%S UTC")
-          TASK=$((100 + RANDOM % 900))
-          LATENCY=$((20 + RANDOM % 180))      # 20–200 ms
+          TASK=$((100 + RANDOM % 900))                # Task ID 100–999
+          LATENCY=$((20 + RANDOM % 180))              # 20–200 ms
           UPTIME=$(awk -v r=$RANDOM 'BEGIN { printf("%.3f", 99.0 + (r % 900)/10000) }')
 
           echo "[${TIME}] Task #${TASK} COMPLETED — uptime=${UPTIME}% — latency=${LATENCY}ms" >> "$FILE"
@@ -74,6 +76,11 @@ jobs:
         run: |
           git config user.name "brawncode"
           git config user.email "nftdropped@gmail.com"
+
           git add README.md logs/
           git commit -m "System log update: $(date -u)" || echo "No changes"
+
+          # предотвращает ошибку "fetch first"
+          git pull --rebase --autostash origin main
+
           git push
