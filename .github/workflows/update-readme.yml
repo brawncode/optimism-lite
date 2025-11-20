@@ -41,7 +41,6 @@ jobs:
           LATENCY=$((20 + RANDOM % 180))      # 20–200 ms
           UPTIME=$(awk -v r=$RANDOM 'BEGIN { printf("%.3f", 99.0 + (r % 900)/10000) }')
 
-          # Формируем "живую" строку лога
           echo "[${TIME}] Task #${TASK} COMPLETED — uptime=${UPTIME}% — latency=${LATENCY}ms" >> "$FILE"
 
           echo "Log written: $FILE"
