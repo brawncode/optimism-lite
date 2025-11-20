@@ -1,4 +1,4 @@
-# Base Lite
+# Optimism Lite
 
 > mini-hub for the **Superchain Eco** — education-first, Base-aligned guides, badge walkthroughs, and low-friction actions (daily check-in, onchain routines)
 
@@ -57,9 +57,9 @@ The app integrates **Reown AppKit** for connection via WalletConnect, with `Wagm
 - ✅ Minimal wallet connect stub (AppKit slot ready)
 - ✅ Footer shortcuts (Discord/X/Guild Base)
 - ✅ **Daily Check-in** (one free, gas-sponsored action/day if possible)
-- 🔜 **Badges** section with compact guides (Base-aligned copy)
-- 🔜 **Creator/Builder Score** helper (Talent Protocol)
-- 🔜 Optional rewards in **$wenaltszn** for streaks/ships
+- ✅ **Badges** section with compact guides (Base-aligned copy)
+- ✅ **Creator/Builder Score** helper (Talent Protocol)
+- ✅ Optional rewards in **$wenaltszn** for streaks/ships
 
 ## Local dev
 
