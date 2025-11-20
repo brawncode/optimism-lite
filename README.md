@@ -67,3 +67,7 @@ The app integrates **Reown AppKit** for connection via WalletConnect, with `Wagm
 npm i
 npm run dev
 # open http://localhost:3000
+### 🛠️ System Monitor — 2025-11-20
+
+_No events yet today._
+
