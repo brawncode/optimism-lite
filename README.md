@@ -8,27 +8,17 @@
 ## What is it?
 
 **Base Lite** is a tiny, fast web app that helps newcomers and builders:
-- Understand the **Base** ecosystem with short, practical guides.
+- Understand the **Optimism** ecosystem with short, practical guides.
 - Earn/track **badges** (with a clear “how/why/risks” section per badge).
 - Keep a steady onchain cadence (planned: **Daily Check-in**).
 - Nudge organic participation (governance, quests, social identity).
 - (Planned) micro-rewards in **$wenaltszn** for streaks/ships.
 
-It mirrors Celo Lite’s minimal UI/structure, adapted to **Base**:
-- Transparent header, system **Light/Dark/Auto** theme.
-- JS-only, no heavy CSS frameworks.
-- Farcaster mini-app compatibility kept (meta + manifest).
-- Clean separation for a future **Badges** section with per-badge guides.
-
 ## Live
 
 - App: **https://optilite.vercel.app/**
-- Discord (Base): **https://discord.gg/buildonbase**  
-- X (Base): **https://x.com/base**
-
-## Screens
-
-<img src="./public/baseog.png" alt="Base Lite OG" width="720"/>
+- Discord (Base): **https://discord.gg/optimism**  
+- X (Base): **https://x.com/optimism**
 
 ## Tech Stack
 
@@ -67,9 +57,9 @@ npm run dev
 # open http://localhost:3000
 ### 🛠️ System Monitor — 2025-11-26
 
+- `[2025-11-26 09:55:40 UTC] Task #423 COMPLETED — uptime=99.065% — latency=45ms`
 - `[2025-11-26 09:25:27 UTC] Task #464 COMPLETED — uptime=99.035% — latency=169ms`
 - `[2025-11-26 08:56:20 UTC] Task #992 COMPLETED — uptime=99.078% — latency=97ms`
 - `[2025-11-26 08:27:23 UTC] Task #237 COMPLETED — uptime=99.078% — latency=33ms`
 - `[2025-11-26 07:47:38 UTC] Task #808 COMPLETED — uptime=99.056% — latency=151ms`
-- `[2025-11-26 07:21:13 UTC] Task #371 COMPLETED — uptime=99.064% — latency=70ms`
 
