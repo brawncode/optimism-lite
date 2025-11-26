@@ -32,7 +32,7 @@
     "@zerodev/session-key": "5.5.4",
     "@zerodev/weighted-ecdsa-validator": "5.4.4",
     "next": "15.0.3",
-    "react": "19.1.0",
+    "react": "19.2.0",
     "react-dom": "19.1.0",
     "viem": "2.31.3",
     "wagmi": "3.0.0"
@@ -40,7 +40,7 @@
   "devDependencies": {
     "@eslint/js": "9.25.0",
     "@types/node": "24.0.3",
-    "@types/react": "19.1.8",
+    "@types/react": "19.2.7",
     "@types/react-dom": "19.1.6",
     "@vitejs/plugin-react": "5.0.4",
     "eslint": "9.25.0",
