@@ -8,27 +8,17 @@
 ## What is it?
 
 **Base Lite** is a tiny, fast web app that helps newcomers and builders:
-- Understand the **Base** ecosystem with short, practical guides.
+- Understand the **Optimism** ecosystem with short, practical guides.
 - Earn/track **badges** (with a clear “how/why/risks” section per badge).
 - Keep a steady onchain cadence (planned: **Daily Check-in**).
 - Nudge organic participation (governance, quests, social identity).
 - (Planned) micro-rewards in **$wenaltszn** for streaks/ships.
 
-It mirrors Celo Lite’s minimal UI/structure, adapted to **Base**:
-- Transparent header, system **Light/Dark/Auto** theme.
-- JS-only, no heavy CSS frameworks.
-- Farcaster mini-app compatibility kept (meta + manifest).
-- Clean separation for a future **Badges** section with per-badge guides.
-
 ## Live
 
 - App: **https://optilite.vercel.app/**
-- Discord (Base): **https://discord.gg/buildonbase**  
-- X (Base): **https://x.com/base**
-
-## Screens
-
-<img src="./public/baseog.png" alt="Base Lite OG" width="720"/>
+- Discord (Base): **https://discord.gg/optimism**  
+- X (Base): **https://x.com/optimism**
 
 ## Tech Stack
 
