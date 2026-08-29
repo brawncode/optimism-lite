@@ -19,7 +19,7 @@
     "@reown/appkit-siwx": "1.8.14",
     "@solana/web3.js": "1.98.4",
     "@tanstack/query-core": "5.90.12",
-    "@tanstack/react-query": "5.90.11",
+    "@tanstack/react-query": "5.90.12",
     "@walletconnect/core": "2.23.0",
     "@walletconnect/ethereum-provider": "2.23.0",
     "@walletconnect/sign-client": "2.23.0",
